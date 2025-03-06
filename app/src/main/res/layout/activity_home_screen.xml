@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".HomeScreenActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/boldFont"
+        android:text="What's New"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/darkGrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/newItemSpace"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 1"
+                android:id="@+id/newItem1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/regFont"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$xxx"
+                android:id="@+id/price1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/lightGray"
+                android:textSize="17sp"
+                android:fontFamily="@font/regFont"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 2"
+                android:id="@+id/newItem2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/regFont"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$xxx"
+                android:id="@+id/price2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/lightGray"
+                android:textSize="17sp"
+                android:fontFamily="@font/regFont"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item 3"
+                android:id="@+id/newItem3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/regFont"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$xxx"
+                android:id="@+id/price3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/lightGray"
+                android:textSize="17sp"
+                android:fontFamily="@font/regFont"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/darkGrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop More"
+            android:id="@+id/shopButton"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/boldFont"
+        android:text="@string/recent_purchases"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/darkGrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/itemSpace1"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 1"
+            android:id="@+id/item1"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/regFont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02/15/2025"
+            android:id="@+id/date1"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/lightGray"
+            android:textSize="17sp"
+            android:fontFamily="@font/regFont"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/itemSpace2"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 2"
+            android:id="@+id/item2"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/regFont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02/15/2025"
+            android:id="@+id/date2"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/lightGray"
+            android:textSize="17sp"
+            android:fontFamily="@font/regFont"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/itemSpace3"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 3"
+            android:id="@+id/item3"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/regFont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date3"
+            android:text="02/15/2025"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/lightGray"
+            android:textSize="17sp"
+            android:fontFamily="@font/regFont"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/darkGrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Return Eligibility"
+            android:id="@+id/eligibilityButton"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="15dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make a Return"
+            android:id="@+id/returnButton"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
