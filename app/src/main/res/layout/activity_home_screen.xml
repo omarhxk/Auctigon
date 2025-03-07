@@ -7,5 +7,59 @@
     android:fillViewport="true"
     android:orientation="vertical">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:id="@+id/backButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bold_font"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/black"
+        android:id="@+id/filterButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"
+        android:layout_gravity="end"/>
+</LinearLayout>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search"
+        android:layout_margin="15dp"
+        android:background="@drawable/rounded_textview"
+        android:iconifiedByDefault="false"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

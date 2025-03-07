@@ -21,12 +21,12 @@
         android:textSize="35sp"
         android:layout_marginStart="15dp"
         android:textColor="@color/black"
-        android:fontFamily="@font/boldFont"/>
+        android:fontFamily="@font/bold_font"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regFont"
+        android:fontFamily="@font/reg_font"
         android:textColor="@color/darkGrey"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
@@ -46,7 +46,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regFont"
+        android:fontFamily="@font/reg_font"
         android:textColor="@color/darkGrey"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
@@ -66,7 +66,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regFont"
+        android:fontFamily="@font/reg_font"
         android:textColor="@color/darkGrey"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
@@ -86,7 +86,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regFont"
+        android:fontFamily="@font/reg_font"
         android:textColor="@color/darkGrey"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
@@ -108,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/RegisterButton"
-        android:fontFamily="@font/boldFont"
+        android:fontFamily="@font/bold_font"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:gravity="center"
@@ -128,7 +128,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regFont"
+            android:fontFamily="@font/reg_font"
             android:textColor="@color/darkGrey"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
@@ -141,9 +141,9 @@
             android:text="Sign in"
             android:textColor="@color/black"
             android:id="@+id/SignInButton"
-            android:fontFamily="@font/boldFont"
+            android:fontFamily="@font/bold_font"
             android:textAllCaps="false"
-            android:background=""
+            android:background="@android:color/transparent"
             android:textSize="14sp"
             android:gravity="center"
             android:layout_marginStart="-10dp"
