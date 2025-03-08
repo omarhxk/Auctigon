@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -49,7 +50,14 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+    implementation("androidx.security:security-crypto-ktx:1.1.0-alpha06")
+    implementation(libs.glide)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.okhttpLoggingInterceptor)
+    implementation(libs.androidx.core)     // Refers to androidx.core:core-ktx:1.9.0
+    implementation(libs.firebase.auth)    // Refers to com.google.firebase:firebase-auth:21.0.5
+    implementation(libs.firebase.storage)  // Refers to com.google.firebase:firebase-storage:20.0.1
 }

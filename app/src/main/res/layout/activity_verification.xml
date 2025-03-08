@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:layout_gravity="right"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verification"
+        android:textSize="35sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bold_font"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Company Name"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/companyNameText"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Company ID (company number)"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/companyIdText"
+        android:inputType="number"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Company Email"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailText"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_textview"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:id="@+id/verifyButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

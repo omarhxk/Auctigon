@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".UserHomeScreenActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Bids"
+        android:textColor="@color/black"
+        android:id="@+id/myBidsButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bold_font"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/black"
+        android:id="@+id/filterButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"
+        android:layout_gravity="end"/>
+</LinearLayout>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search"
+        android:layout_margin="15dp"
+        android:background="@drawable/rounded_textview"
+        android:iconifiedByDefault="false"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relevant"
+        android:fontFamily="@font/bold_font"
+        android:textColor="@color/darkGrey"
+        android:textSize="27dp"
+        android:layout_marginStart="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relevantItem1"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/relevantItem1img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 1"
+                android:background="@android:color/transparent"
+                android:id="@+id/relevantItem1name"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$xxx"
+                android:id="@+id/relevantItem1price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/relevantItem2"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/relevantItem2img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 2"
+                android:id="@+id/relevantItem2name"
+                android:background="@android:color/transparent"
+
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$yyy"
+                android:id="@+id/relevantItem2price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/relevantItem3"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/relevantItem3img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 3"
+                android:background="@android:color/transparent"
+
+                android:id="@+id/relevantItem3name"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$zzz"
+                android:id="@+id/relevantItem3price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/colorBar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/darkGrey" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trending"
+        android:fontFamily="@font/bold_font"
+        android:textColor="@color/darkGrey"
+        android:textSize="27dp"
+        android:layout_marginStart="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:id="@+id/trendingItem1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/trendingItem1img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 1"
+                android:background="@android:color/transparent"
+                android:id="@+id/trendingItem1Name"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$xxx"
+                android:id="@+id/trendingItem1price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/trendingItem2"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/trendingItem2img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 2"
+                android:id="@+id/trendingItem2name"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$yyy"
+                android:id="@+id/trendingItem2price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/trendingItem3"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:id="@+id/trendingItem3img"
+                android:src="@drawable/logo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="item 3"
+                android:id="@+id/trendingItem3name"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="$zzz"
+                android:id="@+id/trendingItem3price"
+                android:fontFamily="@font/reg_font"
+                android:textColor="@color/black"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

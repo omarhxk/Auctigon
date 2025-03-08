@@ -17,144 +17,104 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="Product"
         android:textSize="35sp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="-40dp"
         android:textColor="@color/black"
         android:fontFamily="@font/bold_font"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/reg_font"
-        android:textColor="@color/darkGrey"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="First Name"
-        android:textSize="18dp"/>
+        android:orientation="horizontal">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/firstNameText"
-        android:inputType="textPersonName"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_textview"/>
+        <ImageView
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_gravity="right"
+            android:src="@drawable/logo"
+            android:layout_weight="1"/>
 
-    <TextView
-        android:layout_width="match_parent"
+        <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/reg_font"
-        android:textColor="@color/darkGrey"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Last Name"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lastNameText"
-        android:inputType="textPersonName"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_textview"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/reg_font"
-        android:textColor="@color/darkGrey"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Username"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/usernameText"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_textview"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/reg_font"
-        android:textColor="@color/darkGrey"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Email"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/emailText"
-        android:inputType="textEmailAddress"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_textview"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/reg_font"
-        android:textColor="@color/darkGrey"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Password"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/passwordText"
-        android:inputType="textPassword"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:padding="10dp"
-        android:background="@drawable/rounded_textview"/>
-
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:text="I am a Business Account"
-        android:textSize="18dp"
-        android:id="@+id/BusinessCheck"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/reg_font"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/RegisterButton"
+        android:text="Upload Image"
+        android:id="@+id/uploadButton"
         android:fontFamily="@font/bold_font"
         android:textAllCaps="false"
         android:textSize="20sp"
-        android:gravity="center"
+        android:layout_gravity="end"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:backgroundTint="@color/black"
         android:padding="10dp"
         android:layout_marginTop="20dp"/>
 
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Product Name"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:id="@+id/productNameText"
+        android:background="@drawable/rounded_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Product Id"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/productCodeText"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Description"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionText"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_textview"/>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="bottom"
-        android:layout_gravity="center">
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -163,24 +123,96 @@
             android:textColor="@color/darkGrey"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:textSize="14sp"
-            android:text="@string/already_have_an_account"/>
+            android:text="Starting Price"
+            android:textSize="18dp"
+            android:layout_marginBottom="-15dp"/>
 
-        <Button
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign in"
-            android:textColor="@color/black"
-            android:id="@+id/SignInButton"
-            android:fontFamily="@font/bold_font"
-            android:textAllCaps="false"
-            android:background="@android:color/transparent"
-            android:textSize="14sp"
-            android:gravity="center"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="10dp"
+            android:id="@+id/startingPriceText"
+            android:inputType="number"
+            android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_gravity=""/>
+            android:padding="10dp"
+            android:background="@drawable/rounded_textview"/>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/reg_font"
+            android:textColor="@color/darkGrey"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Buy Now"
+            android:textSize="18dp"
+            android:layout_marginBottom="-15dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buyNowText"
+            android:inputType="number"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_textview"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="@color/darkGrey"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Listing Expiry Date"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateText"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:inputType="date"
+        android:hint="mm/dd/yyyy"
+        android:background="@drawable/rounded_textview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reg_font"
+        android:textColor="#FF0000"
+        android:id="@+id/errorMsg"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Please fill out all fields"
+        android:textSize="18dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List"
+        android:id="@+id/ListButton"
+        android:fontFamily="@font/bold_font"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"/>
 
 </LinearLayout>

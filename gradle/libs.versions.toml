@@ -13,6 +13,14 @@ lifecycleViewmodelKtx = "2.8.7"
 navigationFragmentKtx = "2.6.0"
 navigationUiKtx = "2.6.0"
 activity = "1.9.3"
+androidx_security_crypto_ktx = "1.1.0"
+glide = "4.11.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
+androidx_activity = "1.6.0"
+androidx_core = "1.9.0"
+firebase_auth = "21.0.5"
+firebase_storage = "20.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,8 +35,16 @@ androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifec
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.3"
+androidx_security_crypto_ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "androidx_security_crypto_ktx" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx_core" }
+firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebase_auth" }
+firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebase_storage" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

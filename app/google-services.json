@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "542010124184",
+    "firebase_url": "https://auctigon-c1c91-default-rtdb.firebaseio.com",
+    "project_id": "auctigon-c1c91",
+    "storage_bucket": "auctigon-c1c91.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542010124184:android:93d5aea4f7f44f0bc1aded",
+        "android_client_info": {
+          "package_name": "com.example.htfapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbWXjvFYvHGslfDCwb_V0QUoL45pO44NQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
