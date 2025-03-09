@@ -39,8 +39,8 @@
         <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Upload Image"
-        android:id="@+id/uploadButton"
+        android:text="Assess Quality"
+        android:id="@+id/qualityButton"
         android:fontFamily="@font/bold_font"
         android:textAllCaps="false"
         android:textSize="20sp"

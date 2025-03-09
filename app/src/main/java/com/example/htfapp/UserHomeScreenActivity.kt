@@ -1,15 +1,21 @@
 package com.example.htfapp
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.Visibility
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -17,75 +23,95 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.getValue
 
 class UserHomeScreenActivity : AppCompatActivity() {
+    // Convert 85dp to pixels
+    //val sizeInPx = TypedValue.applyDimension(
+    //    TypedValue.COMPLEX_UNIT_DIP, 85f, resources.displayMetrics
+   // ).toInt()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_home_screen)
 
-        val trendingItem1 = findViewById<LinearLayout>(R.id.trendingItem1)
-        val trendingItem2 = findViewById<LinearLayout>(R.id.trendingItem2)
-        val trendingItem3 = findViewById<LinearLayout>(R.id.trendingItem3)
-        val relevantItem1 = findViewById<LinearLayout>(R.id.relevantItem1)
-        val relevantItem2 = findViewById<LinearLayout>(R.id.relevantItem2)
-        val relevantItem3 = findViewById<LinearLayout>(R.id.relevantItem3)
-
-        val trendingItem1name = findViewById<Button>(R.id.trendingItem1Name)
-        val trendingItem2name = findViewById<Button>(R.id.trendingItem2name)
-        val trendingItem3name = findViewById<Button>(R.id.trendingItem3name)
-        val relevantItem1name = findViewById<Button>(R.id.relevantItem1name)
-        val relevantItem2name = findViewById<Button>(R.id.relevantItem2name)
-        val relevantItem3name = findViewById<Button>(R.id.relevantItem3name)
-
-        val trendingItem1img = findViewById<ImageView>(R.id.trendingItem1img)
-        val trendingItem2img = findViewById<ImageView>(R.id.trendingItem2img)
-        val trendingItem3img = findViewById<ImageView>(R.id.trendingItem3img)
-        val relevantItem1img = findViewById<ImageView>(R.id.relevantItem1img)
-        val relevantItem2img = findViewById<ImageView>(R.id.relevantItem2img)
-        val relevantItem3img = findViewById<ImageView>(R.id.relevantItem3img)
-
-        val trendingItem1price = findViewById<TextView>(R.id.trendingItem1price)
-        val trendingItem2price = findViewById<TextView>(R.id.trendingItem2price)
-        val trendingItem3price = findViewById<TextView>(R.id.trendingItem3price)
-        val relevantItem1price = findViewById<TextView>(R.id.relevantItem1price)
-        val relevantItem2price = findViewById<TextView>(R.id.relevantItem2price)
-        val relevantItem3price = findViewById<TextView>(R.id.relevantItem3price)
-
-        val listings = arrayListOf(relevantItem1, relevantItem2, relevantItem3, trendingItem1, trendingItem2, trendingItem3)
-        val imgs = arrayListOf(relevantItem1img, relevantItem2img, relevantItem3img, trendingItem1img, trendingItem2img, trendingItem3img)
-        val names = arrayListOf(relevantItem1name, relevantItem2name, relevantItem3name, trendingItem1name, trendingItem2name, trendingItem3name)
-        val prices = arrayListOf(relevantItem1price, relevantItem2price, relevantItem3price, trendingItem1price, trendingItem2price, trendingItem3price)
-
-        val listingsRef = FirebaseDatabase.getInstance().getReference().child("Listings")
+        val scroller = findViewById<ScrollView>(R.id.scroller)
+        val linearlayout0 = LinearLayout(this@UserHomeScreenActivity).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            orientation = LinearLayout.VERTICAL
+        }
+        val listingsRef = FirebaseDatabase.getInstance().reference.child("Listings")
         listingsRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val len = snapshot.children.count()
-                var i = 0
+                if (snapshot.exists()) {
                 for (childSnapshot in snapshot.children) {
-                    listings[i].visibility = View.VISIBLE
-                    childSnapshot.child("imageUrl").getValue(String::class.java)
-                        ?.let { loadImageFromFirebase(imgs[i], it) }
-                    names[i].text = childSnapshot.child("Product Name").getValue(String::class.java)
-                    prices[i].text = "$" + childSnapshot.child("Buy Now Price").getValue(String::class.java)
-                    i++
-                }
+                    val key = childSnapshot.key
+                    val linearlayout = LinearLayout(this@UserHomeScreenActivity).apply {
+                        layoutParams = LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                        )
+                        orientation = LinearLayout.HORIZONTAL
+                    }
 
-                while (i < len) {
-                    listings[i].visibility = View.GONE
-                    i++
-                }
+                    //product image
+                    //val imageview = ImageView(this@UserHomeScreenActivity).apply {
+                        //layoutParams = LinearLayout.LayoutParams(sizeInPx, sizeInPx)
+                       /// scaleType = ImageView.ScaleType.CENTER_CROP
+                      //  setImageResource(R.drawable.logo)
+                    //}
 
+
+
+                   // linearlayout.addView(imageview)
+
+                    //product text/button
+                    val button = Button(this@UserHomeScreenActivity).apply {
+
+                        text = childSnapshot.child("Product Name").getValue(String::class.java)
+                        setTextColor(Color.BLACK)
+                        setBackgroundColor(Color.TRANSPARENT)
+                        layoutParams = LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT)
+
+                        setOnClickListener {
+                            intent = Intent(this@UserHomeScreenActivity, productViewActivity::class.java)
+                            intent.putExtra("Product", key)
+                            startActivity(intent)
+                        }
+                    }
+
+                    linearlayout.addView(button)
+
+                    val price = TextView(this@UserHomeScreenActivity).apply {
+                        text = childSnapshot.child("Buy Now Price").getValue(String::class.java)
+                        setTextColor(Color.BLACK) // Set text color to black
+                        layoutParams = LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                        )
+                    }
+
+                    linearlayout.addView(price)
+
+                    linearlayout0.addView(linearlayout)
+                }
             }
+
+            else {
+                Toast.makeText(this@UserHomeScreenActivity, "No current listings", Toast.LENGTH_SHORT).show()
+            }}
+
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@UserHomeScreenActivity, "drerr", Toast.LENGTH_SHORT).show()
             }
-
         })
 
+        scroller.addView(linearlayout0)
+
+
     }
 
-    fun loadImageFromFirebase(imageView: ImageView, imageUrl: String) {
-        Glide.with(imageView.context)  // Use imageView's context
-            .load(imageUrl)            // Load the image from URL
-            .into(imageView)           // Set it to the ImageView
-    }
 }

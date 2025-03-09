@@ -28,6 +28,9 @@
             android:name=".productViewActivity"
             android:exported="false" />
         <activity
+            android:name=".BusinessHomeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".VerificationActivity"
             android:exported="false" />
         <activity

@@ -6,10 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 
 // Login Activity
@@ -38,24 +42,34 @@ class LoginActivity : AppCompatActivity() {
                             val uid = user?.uid
 
                             val dbRef = FirebaseDatabase.getInstance().reference
-                            uid?.let { it1 -> dbRef.child("Users").child(it1).child("Business").get()
-                                .addOnSuccessListener { snapshot ->
-                                    val businessAcc = snapshot.getValue(Boolean::class.java)
-                                    if (businessAcc == true) {
-                                        val intent = Intent(this, UserHomeScreenActivity::class.java)
-                                        startActivity(intent)
-                                    }
-                                    else {
-                                        val intent = Intent(this, BusinessHomeScreenActivity::class.java)
-                                        startActivity(intent)
-                                    }
-                                 }
+                            if (uid != null) {
+                                dbRef.child("Users").child(uid).child("Business")
+                                    .addValueEventListener(object : ValueEventListener {
+                                        override fun onDataChange(snapshot: DataSnapshot) {
+                                            val businessAcc = snapshot.getValue(Boolean::class.java)
+                                            if (businessAcc == false) {
+                                                val intent = Intent(
+                                                    this@LoginActivity,
+                                                    UserHomeScreenActivity::class.java
+                                                )
+                                                startActivity(intent)
+                                            } else {
+                                                val intent = Intent(
+                                                    this@LoginActivity,
+                                                    BusinessHomeScreenActivity::class.java
+                                                )
+                                                startActivity(intent)
+                                            }
+                                        }
 
+                                        override fun onCancelled(error: DatabaseError) {
+                                            Toast.makeText(this@LoginActivity, "Couldnt find user", Toast.LENGTH_SHORT).show()
+                                        }
+                                    })
                             }
                         }
                     }
             }
-
         }
 
         signUpButton.setOnClickListener {

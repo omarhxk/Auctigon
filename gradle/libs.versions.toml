@@ -38,10 +38,7 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.3"
 androidx_security_crypto_ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "androidx_security_crypto_ktx" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
-firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx_core" }
-firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebase_auth" }
-firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebase_storage" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

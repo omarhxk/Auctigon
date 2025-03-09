@@ -23,6 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/logo"
+        android:id="@+id/productImage"
         android:layout_gravity="center"/>
     
     <TextView
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:text="Product Name"
         android:gravity="center"
+        android:id="@+id/productName"
         android:fontFamily="@font/bold_font"
         android:textColor="@color/black"
         android:textSize="25dp"/>
@@ -60,6 +62,7 @@
                 android:text="$xxx"
                 android:textSize="20dp"
                 android:textColor="@color/black"
+                android:id="@+id/buyNowPrice"
                 android:fontFamily="@font/bold_font"
                 android:layout_marginLeft="15dp"
                 android:gravity="start"
@@ -68,8 +71,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="y Sold"
+                android:id="@+id/numSold"
                 android:textSize="20dp"
+                android:text="y Sold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/bold_font"
                 android:layout_marginLeft="100dp"/>
@@ -135,6 +139,7 @@
                     android:text="$zzz |"
                     android:textColor="@color/black"
                     android:layout_marginLeft="15dp"
+                    android:id="@+id/lastSalePrice"
                     android:fontFamily="@font/bold_font"
                     android:gravity="right"/>
             </LinearLayout>
@@ -157,6 +162,7 @@
                     android:layout_height="wrap_content"
                     android:text="$rrr "
                     android:layout_marginLeft="5dp"
+                    android:id="@+id/highestBidPrice"
                     android:textColor="@color/black"
                     android:fontFamily="@font/bold_font"
                     android:gravity="left"/>

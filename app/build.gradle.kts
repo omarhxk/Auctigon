@@ -52,12 +52,17 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation("androidx.security:security-crypto-ktx:1.1.0-alpha06")
     implementation(libs.glide)
-    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.okhttpLoggingInterceptor)
     implementation(libs.androidx.core)     // Refers to androidx.core:core-ktx:1.9.0
-    implementation(libs.firebase.auth)    // Refers to com.google.firebase:firebase-auth:21.0.5
-    implementation(libs.firebase.storage)  // Refers to com.google.firebase:firebase-storage:20.0.1
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-storage")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
 }
